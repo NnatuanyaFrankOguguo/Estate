@@ -1,0 +1,144 @@
+.hero-section{
+    border: 1px solid black;
+    height: 95vh; /*taking the entire height row of the screen*/
+    max-height: 1100px; /*that the hero section height will not pass 1100px despite the screen*/
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 5% 5%;
+
+} 
+
+.hero-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; /*next is  for the slides of images*/
+
+}
+
+/* .hero-slide{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+} */
+
+.hero.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero.slider::before{
+    content:"";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    bottom: 0vh;
+    left: 0;
+    overflow: hidden;
+    opacity: 0.4;
+    background-color: linear-gradient( /*creating an overlay effect on the image*/
+    0deg,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.2) 50%,
+    rgba(0,0,0,0.6) 100%,);
+}
+
+.hero-img img{
+    position: absolute;
+    top:0 ;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 20;
+    display: flex;
+    top: 430px;
+    left: 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
+    width: 100%;
+    color: aliceblue;
+}
+
+.slider-btn{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    z-index: 10;
+    gap: 8px;
+}
+
+.slider-btn img{
+    width: 35px;
+    cursor: pointer; 
+}
+
+.slider-btn img:hover{
+    background-color: rgb(96, 109, 109);
+    border-radius: 90%;
+    transform: scale(1.2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.hero-info{
+    position: absolute;
+}
+
+.hero-details{
+    width: max-content;
+}
+
+.intro-text{
+    color: white;
+    display: flex;
+    column-gap: 8px;
+    font-size: max(0.9vw, 9px);
+    background-color: rgb(54, 52, 52);
+    border-radius: 10px;
+}
+
+.intro-text p{
+    padding: 5px;
+}
+
+.intro-text p:first-child{
+    background: rgb(239, 182, 113);
+    box-shadow: rgb(239, 182, 113) 0px 5px 15px;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.intro-btn{
+    background: rgb(239, 182, 113);
+    box-shadow: rgb(25, 25, 63) 0px 5px 15px;
+    color: whitesmoke;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.intro-btn:hover{
+    transform: scale(1.05);
+    background-color: aliceblue;
+    color: black;
+}
