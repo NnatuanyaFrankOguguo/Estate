@@ -18,7 +18,8 @@
 
 .about-img{
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    border-radius: 14px 90px 14px 14px;
     height: 20rem;
     
 }

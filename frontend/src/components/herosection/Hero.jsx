@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState} from 'react'
 import './Hero.css'
 import leftarrow from './left.png'
 import rightarrow from './right.png'
-import sliderData from '../../images/hero-Image/Slider'
-import hero from '../../images/hero-Image/hero.jpg'
+import hero_4 from '../../images/hero-Image/hero_4.jpg'
 import facebook from '../../images/hero-Image/facebook.png'
 import tiktok from '../../images/hero-Image/tiktok.png'
 import instagram from '../../images/hero-Image/instagram.png'
@@ -30,7 +29,7 @@ const Hero = () => {
     }
 
   return (
-    <div className='hero-section' style={{backgroundImage : `url(${hero})`}}>
+    <div className='hero-section' style={{backgroundImage : `url(${hero_4})`}}>
         <div className="hero-container maincontainer" >    
             
             <div className='hero-info'>
@@ -56,36 +55,6 @@ const Hero = () => {
                     <a href="#" data-tooltip="Tiktok"><img className='social-icons' src={tiktok} alt="tiktok" /></a>
                 </div>
 
-
-            </div>
-
-            <div className='img-slider'>
-
-                {sliderData.map((slide, index) => {
-                    return (
-                        <div key={index}>
-                            {index === current && (
-                                <div className='slides'>
-                                    <div className="slide-img">
-                                        <img src={slide.image} className="image" alt="houses" loading='lazy' />
-                                    </div>
-                                    <div className="slide-text">
-                                        <h3 className='title'>{slide.title}</h3>
-                                    </div>
-                                </div>
-                                
-                            )}
-                            
-                        </div>
-                    )
-                } )}
-
-                <div className="slider-btn">
-                    <img className="shift-icons" onClick={backSlide} src={leftarrow} alt="leftarrow" />
-                    <img className="shift-icons" onClick={nextSlide} src={rightarrow} alt="rightarrow" />
-                </div>
-
-                
 
             </div>
             
