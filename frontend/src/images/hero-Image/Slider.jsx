@@ -1,37 +1,31 @@
-import img_1 from './img_1.jpg'
-import img_3 from './img_3.jpg' 
-import img_4 from './img_4.jpg' 
-import img_5 from './img_5.jpg' 
-import img_9 from './img_9.jpg' 
-import hero from './hero.jpg'
+import slider_1 from './slider_1.jpg'
+import slider_2 from './slider_2.jpg' 
+import slider_3 from './slider_3.jpg' 
+import slider_4 from './slider_4.jpg' 
 
 
 const sliderData = [
     {
-        title : "Build",
-        image : hero,
+        title : "Luxury Homes",
+        image : slider_1,
         alt: 'weight'
     },
     {
-        title : "Gain",
-        image : img_3,
+        title : "Property/Land Sales",
+        image : slider_2,
         alt: 'weight'
     },
     {
-        title : "Sacrifice",
-        image : img_4,
+        title : "We Build & Construct",
+        image : slider_3,
         alt: 'weight'
     },
     {
-        title : "Cost",
-        image : img_5,
+        title : "Our Real Estate Across Nigeria",
+        image : slider_4,
         alt: 'weight'
     },
-    {
-        title : "Build",
-        image : img_9,
-        alt: 'weight'
-    },
+   
   
 ]
 

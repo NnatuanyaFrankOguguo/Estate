@@ -4,49 +4,25 @@ import leftarrow from './left.png'
 import rightarrow from './right.png'
 import sliderData from '../../images/hero-Image/Slider'
 import hero from '../../images/hero-Image/hero.jpg'
+import facebook from '../../images/hero-Image/facebook.png'
+import tiktok from '../../images/hero-Image/tiktok.png'
+import instagram from '../../images/hero-Image/instagram.png'
+import whatsapp from '../../images/hero-Image/whatsapp.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
 
-    // const [current, setcurrent] = useState(0)
-    // const length = sliderData.length
-    // const timeout = useRef(null)
+    const [current, setCurrent] = useState(0)
 
-    // useEffect(()=>{
-    //     const nextSlide = () => {
-    //         setcurrent(current => (current === length - 1 ? 0 : current + 1))
-    //     }
+    const nextSlide = () => {
+        setCurrent(current === sliderData.length - 1 ? 0 : current + 1)
+    }
 
-    //     timeout.current = setInterval(nextSlide, 5000)
 
-    //     return function () {
-    //         if(timeout.current){
-    //             clearTimeout(timeout.current)
-    //         }
-    //     }
-
-    // }, [current, length])
-
-    // const nextSlide = () => {
-    //     if(timeout.current){
-    //         clearTimeout(timeout.current)
-    //     }
-    //     setcurrent(current === length - 1 ? 0 : current + 1)
-        
-    // }
-
-    // const backSLide = () => {
-    //     if(timeout.current){
-    //         clearTimeout(timeout.current)
-    //     }
-    //     setcurrent(current === 0 ? length - 1 : current - 1)
-    // }
-
-    // if(!Array.isArray(sliderData) || sliderData.length <= 0)
-    // {
-    //     return null
-    // }
+    const backSlide = () => {
+        setCurrent(current === 0 ? sliderData.length - 1 : current - 1)
+    }
 
     const iconStyle = {
         fontSize : '1rem',
@@ -54,12 +30,9 @@ const Hero = () => {
     }
 
   return (
-    <div className='hero-section'>
+    <div className='hero-section' style={{backgroundImage : `url(${hero})`}}>
         <div className="hero-container maincontainer" >    
-            <div className="hero-img">
-                <img src={hero} alt="land" loading='lazy'/>
-            </div>
-
+            
             <div className='hero-info'>
                 <div className="hero-details">
                     <div className='intro-text'>
@@ -68,24 +41,51 @@ const Hero = () => {
                     </div>
                 </div>
 
-
-
                 <h1 className='intro-header'>Ouchman Global Resources Agency Limited</h1>
 
                 <h3>A real life estate company that offers you a life tenancy</h3>
 
-                <p>Bringing a moment of satisfaction to your doorstep</p>
+                <p className='para'>Bringing a moment of satisfaction to your doorstep</p>
 
                 <button className='intro-btn'>Get Started <FontAwesomeIcon style={iconStyle} icon={faArrowRight} /></button>
 
                 <div className='social-container'>
-
+                    <a href="#" data-tooltip="Facebook" ><img className='social-icons' src={facebook} alt="facebook" /></a>
+                    <a href="#" data-tooltip="Whatsapp"><img className='social-icons'  src={whatsapp} alt="whatsapp" /></a>
+                    <a href="#" data-tooltip="Instagram"><img className='social-icons'  src={instagram} alt="instagram" /></a>
+                    <a href="#" data-tooltip="Tiktok"><img className='social-icons' src={tiktok} alt="tiktok" /></a>
                 </div>
 
 
             </div>
 
             <div className='img-slider'>
+
+                {sliderData.map((slide, index) => {
+                    return (
+                        <div key={index}>
+                            {index === current && (
+                                <div className='slides'>
+                                    <div className="slide-img">
+                                        <img src={slide.image} className="image" alt="houses" loading='lazy' />
+                                    </div>
+                                    <div className="slide-text">
+                                        <h3 className='title'>{slide.title}</h3>
+                                    </div>
+                                </div>
+                                
+                            )}
+                            
+                        </div>
+                    )
+                } )}
+
+                <div className="slider-btn">
+                    <img className="shift-icons" onClick={backSlide} src={leftarrow} alt="leftarrow" />
+                    <img className="shift-icons" onClick={nextSlide} src={rightarrow} alt="rightarrow" />
+                </div>
+
+                
 
             </div>
             
