@@ -19,8 +19,8 @@
 .about-img{
     width: 100%;
     height: 100%;
-    border-radius: 14px 90px 14px 14px;
     height: 20rem;
+    position: relative;
     
 }
 
@@ -60,6 +60,85 @@
     margin-bottom: 15px;
 }
 
+.img-slider{
+    margin-top: 60px;
+    height: 100%;
+    max-width: 50%;
+    position: relative;
+    border-radius: 5%;
+    display: flex;
+    flex: 1;
+
+    
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+   
+    /* position: relative; */
+}
+
+
+.slides{
+    /* position: absolute; */ 
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    position: relative;
+    
+    
+}
+
+.slide-img{
+    width: 100%;
+    height: 100%;
+     
+}
+
+.slide-img .image{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px 90px 14px 14px;
+    
+}
+
+.about-img .shift-icons{
+    width: 35px;
+    cursor: pointer;
+}
+
+.slider-btn{
+    position: absolute;
+    display: flex;
+    gap: 6px;
+    top: 88%;
+    left: 75%;
+}
+
+.slides .title{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    max-width: 600px;
+    margin-bottom: 10px;
+    
+}
+
+
+
 @media (max-width:800px) {
     .about{
         flex-direction: column;
@@ -70,7 +149,7 @@
     }
     .about-left{
         flex-basis: 100%;
-        margin: 20px;
+        margin: 25px;
         order: 2;
     }
     .about-right{

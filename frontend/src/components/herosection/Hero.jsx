@@ -12,16 +12,6 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
 
-    const [current, setCurrent] = useState(0)
-
-    const nextSlide = () => {
-        setCurrent(current === sliderData.length - 1 ? 0 : current + 1)
-    }
-
-
-    const backSlide = () => {
-        setCurrent(current === 0 ? sliderData.length - 1 : current - 1)
-    }
 
     const iconStyle = {
         fontSize : '1rem',
