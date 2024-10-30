@@ -32,17 +32,21 @@ const Hero = () => {
 
                 <h1 className='intro-header'>Ouchman Global Resources Agency Limited</h1>
 
-                <h3>A real life estate company that offers you a life tenancy</h3>
+                <div className='directories'>
+                    <h3>A real life estate company that offers you a life tenancy</h3>
 
-                <p className='para'>Bringing a moment of satisfaction to your doorstep</p>
+                    <p className='para'>Bringing a moment of satisfaction to your doorstep</p>
+                
 
-                <button className='intro-btn'>Get Started <FontAwesomeIcon style={iconStyle} icon={faArrowRight} /></button>
+                
+                    <button className='intro-btn'>Get Started <FontAwesomeIcon style={iconStyle} icon={faArrowRight} /></button>
 
-                <div className='social-container'>
-                    <a href="#" data-tooltip="Facebook" ><img className='social-icons' src={facebook} alt="facebook" /></a>
-                    <a href="#" data-tooltip="Whatsapp"><img className='social-icons'  src={whatsapp} alt="whatsapp" /></a>
-                    <a href="#" data-tooltip="Instagram"><img className='social-icons'  src={instagram} alt="instagram" /></a>
-                    <a href="#" data-tooltip="Tiktok"><img className='social-icons' src={tiktok} alt="tiktok" /></a>
+                    <div className='social-container'>
+                        <a href="#" data-tooltip="Facebook" ><img className='social-icons' src={facebook} alt="facebook" /></a>
+                        <a href="#" data-tooltip="Whatsapp"><img className='social-icons'  src={whatsapp} alt="whatsapp" /></a>
+                        <a href="#" data-tooltip="Instagram"><img className='social-icons'  src={instagram} alt="instagram" /></a>
+                        <a href="#" data-tooltip="Tiktok"><img className='social-icons' src={tiktok} alt="tiktok" /></a>
+                    </div>
                 </div>
 
 

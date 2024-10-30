@@ -89,7 +89,7 @@ const About = () => {
       </div>
 
       <div className="about-right">
-        <h1>ABOUT ORGRAL</h1>
+        <h1>ABOUT OGRAL</h1>
         <h3>Our Commitment to You</h3>
         <p>
           GYMbro is a premium fitness center that offers state-of-the-art

@@ -11,17 +11,6 @@
 
 } 
 
-/* .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(91, 88, 88, 0.5); /* Adjust the last value (0.5) to control the darkness 
-    z-index: 1;
-} */
-
 .hero-container{
     width: 100%;
     height: 100%;
@@ -29,80 +18,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-     /*next is  for the slides of images*/
+  
 
 }
-
-/* .hero-slide{
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-} */
-
-/* .hero.slider{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* .hero.slider::before{
-    content:"";
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 100vh;
-    bottom: 0vh;
-    left: 0;
-    overflow: hidden;
-    opacity: 0.4;
-    background-color: linear-gradient( /*creating an overlay effect on the image
-    0deg,
-    rgba(0,0,0,1) 0%,
-    rgba(0,0,0,0.2) 50%,
-    rgba(0,0,0,0.6) 100%,);
-}
-*/
-
-
-/* .slide-text{
-    position: relative;
-    z-index: 20;
-    display: flex;
-    top: 10px;
-    left: 10%;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 1600px;
-    width: 100%;
-    color: aliceblue;
-}  */
-
-/* .slider-btn{
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    display: flex;
-    z-index: 10;
-    gap: 8px;
-}
-
-.slider-btn img{
-    width: 35px;
-    cursor: pointer; 
-}
-
-.slider-btn img:hover{
-    background-color: rgb(96, 109, 109);
-    border-radius: 90%;
-    transform: scale(1.2);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}*/
 
 .hero-info{
     flex: 1; /* Take up available space */
@@ -128,14 +46,26 @@
     font-size: max(1.5vw, 15px);
     font-weight: 600;
     margin-bottom: 10px;
+    text-shadow: 0 0 5px #fff,   /* Primary glow */
+    0 0 10px #fff,  /* Second layer of glow */
+    0 0 15px bisque,  /* Blue glow */
+    0 0 20px rgb(35, 226, 83), 
+    0 0 25px rgb(59, 223, 108), 
+    0 0 30px rgb(221, 236, 236),  /* Aqua glow */
+    0 0 35px rgb(212, 223, 223);
 }
 
 .hero-info .para{
     color: white;
     font-size: max(1.3vw, 9px);
     margin-bottom: 10px;
-    text-shadow: 1px 1px 0px rgba(235, 235, 241, 0.5), /* Light shadow */
-    2px 2px 2px rgba(224, 220, 220, 0.3); /* Darker shadow for depth */
+    text-shadow: 0 0 5px #fff,   /* Primary glow */
+    0 0 0px #fff,  /* Second layer of glow */
+    0 0 10px rgb(222, 222, 237),  /* Blue glow */
+    0 0 10px rgb(10, 10, 11), 
+    0 0 10px rgb(221, 221, 232), 
+    0 0 30px rgb(11, 11, 11),  /* Aqua glow */
+    0 0 35px rgb(227, 235, 235);
 }
 
 .hero-details{
@@ -155,6 +85,7 @@
 
 .intro-text p{
     padding: 5px;
+    
 }
 
 .intro-text p:first-child{
@@ -224,82 +155,74 @@
     visibility: visible;
 }
 
-/* IMAGE SLIDER CSS */
 
-/* .img-slider{
-    margin-top: 60px;
-    height: 80vh;
-    max-width: 50%;
-    position: relative;
-    border-radius: 5%;
-    display: flex;
-    flex: 1;
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: auto; /* Allow height to adjust based on content */
+        min-height: 90vh; /* Ensure it takes at least the full viewport height */
+    }
 
-    
+    .hero-container {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 20px; /* Add some padding */
+    }
+
+    .hero-info {
+        max-width: 90%; /* Full width on mobile */
+        padding: 0; /* Remove padding */
+        margin-top: 80px;
+        text-align: center; /* Center align text */
+    }
+
+    .hero-details {
+        width: 100%; /* Full width */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align items */
+    }
+
+    .intro-text{
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: center; /* Center the wrapped items */
+        margin-bottom: 10px;
+        
+    }
+
+    .intro-text p{
+        font-size: 10px;
+    }
+
+
+    .directories{
+        margin-top: 90px;
+    }
+
+    .intro-btn {
+        padding: 10px 16px; /* Slightly smaller padding */
+        font-size: 14px; /* Smaller font size */
+        margin-bottom: -10px;
+        
+    }
+
+    .social-container {
+        justify-content: center; /* Center social icons */
+    }
 }
 
-.slider {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    
-   
-    /* position: relative; 
+@media screen and (max-width: 480px) {
+    .hero-info .intro-header {
+        font-size: 20px; /* Even smaller font size for very small screens */
+    }
+
+    .hero-info h3 {
+        font-size: 16px;
+    }
+
+    .hero-info .para {
+        font-size: 14px;
+    }
+
+    .intro-text {
+        font-size: 12px;
+    }
 }
-
-
-.slides{
-    /* position: absolute;  
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease-in-out;
-    position: relative;
-    
-    
-}
-
-.slide-img{
-    width: 100%;
-    height: 100%;
-    
-    
-}
-
-.slide-img .image{
-    width: 100%;
-    height: 100%;
-    border-radius: 5%;
-    object-fit: cover;
-    object-position: center;
-    
-}
-
-.img-slider .shift-icons{
-    width: 35px;
-    cursor: pointer;
-}
-
-.slider-btn{
-    position: absolute;
-    display: flex;
-    gap: 6px;
-    top: 88%;
-    left: 75%;
-}
-
-.slides .title{
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    color: white;
-    font-size: 25px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    max-width: 600px;
-    margin-bottom: 10px;
-    
-} */

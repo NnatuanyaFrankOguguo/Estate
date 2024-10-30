@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import arm_muscle from './arm_muscle.png'
 import lifting from './lifting.png'
+import logoss from './logoss.jpg'
 import menu from './menu.png'
 import './Navbar.css'
 
@@ -31,7 +32,7 @@ const Navbar = () => {
   return (
     <nav className={`maincontainer ${sticky ? 'white-nav' : '' }`}>
         <div className='logos'>
-            <img src={arm_muscle} alt="" /><img src={lifting} alt="" /><p>GYMbro</p>
+            <img className='logoss' src={logoss} alt="" />
         </div>
         <ul className={` ${mobilemenu ? 'hide-mobile-menu' : ''} `}>
             <li>Home</li>
