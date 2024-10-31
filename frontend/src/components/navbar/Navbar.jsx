@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className='logos'>
             <img className='logoss' src={logoss} alt="" />
         </div>
-        <ul className={` ${mobilemenu ? 'hide-mobile-menu' : ''} `}>
+        <ul className={` ${mobilemenu ? '' : 'hide-mobile-menu'} `}>
             <li>Home</li>
             <li>About Us</li>
             <li>Prices</li>
