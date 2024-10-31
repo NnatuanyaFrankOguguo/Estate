@@ -1,7 +1,7 @@
 nav{
     width: 100%;
     background: transparent;
-    color: rgb(20, 215, 14);
+    color: rgb(237, 243, 237);
     padding: 4px 0;
     position: fixed;
     top: 0;
@@ -82,7 +82,7 @@ nav ul li {
         top: 0;
         right: 0; /*changing the px of the right side bar to -280px is what will make it disappear from the screen but we will do that dynamically when the button is click the menu button*/
         bottom: 0;
-        background: #212EA0;
+        background: #21a05a;
         z-index: -1;
         width: 250px;
         padding-top: 70px;
