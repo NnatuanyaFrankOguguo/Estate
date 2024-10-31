@@ -77,12 +77,14 @@ const About = () => {
               onClick={backSlide}
               src={leftarrow}
               alt="leftarrow"
+              loading='lazy'
             />
             <img
               className="shift-icons"
               onClick={nextSlide}
               src={rightarrow}
               alt="rightarrow"
+              loading='lazy'
             />
           </div>
         </div>

@@ -42,10 +42,10 @@ const Hero = () => {
                     <button className='intro-btn'>Get Started <FontAwesomeIcon style={iconStyle} icon={faArrowRight} /></button>
 
                     <div className='social-container'>
-                        <a href="#" data-tooltip="Facebook" ><img className='social-icons' src={facebook} alt="facebook" /></a>
-                        <a href="#" data-tooltip="Whatsapp"><img className='social-icons'  src={whatsapp} alt="whatsapp" /></a>
-                        <a href="#" data-tooltip="Instagram"><img className='social-icons'  src={instagram} alt="instagram" /></a>
-                        <a href="#" data-tooltip="Tiktok"><img className='social-icons' src={tiktok} alt="tiktok" /></a>
+                        <a href="#" data-tooltip="Facebook" ><img className='social-icons' src={facebook} alt="facebook" loading='lazy'/></a>
+                        <a href="#" data-tooltip="Whatsapp"><img className='social-icons'  src={whatsapp} alt="whatsapp" loading='lazy'/></a>
+                        <a href="#" data-tooltip="Instagram"><img className='social-icons'  src={instagram} alt="instagram" loading='lazy'/></a>
+                        <a href="#" data-tooltip="Tiktok"><img className='social-icons' src={tiktok} alt="tiktok" loading='lazy'/></a>
                     </div>
                 </div>
 
