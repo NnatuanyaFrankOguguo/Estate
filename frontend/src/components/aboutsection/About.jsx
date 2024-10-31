@@ -92,14 +92,7 @@ const About = () => {
         <h1>ABOUT OGRAL</h1>
         <h3>Our Commitment to You</h3>
         <p>
-          GYMbro is a premium fitness center that offers state-of-the-art
-          equipment, experinced trainers, and customized workout plans to help
-          you achieve your fitness goals.
-        </p>
-        <p>
-          Our welcoming environment and friendly staff every visit an enjoyable
-          experience. Join us to transform your body, boost your energy, and
-          improve your overrall health and wellbeing
+        Welcome to Ogral, where we bring your real estate dreams to life. With a commitment to excellence and a passion for innovation, we have built a reputation as a trusted name in the real estate industry, helping clients find not just properties, but homes that suit their unique needs and aspirations.
         </p>
 
         <div>
