@@ -160,6 +160,7 @@
     .hero-section {
         height: auto; /* Allow height to adjust based on content */
         min-height: 90vh; /* Ensure it takes at least the full viewport height */
+        padding-bottom: 60px;
     }
 
     .hero-container {
@@ -172,6 +173,7 @@
         padding: 0; /* Remove padding */
         margin-top: 80px;
         text-align: center; /* Center align text */
+        margin-bottom: 40px; 
     }
 
     .hero-details {
@@ -192,9 +194,14 @@
         font-size: 10px;
     }
 
-
-    .directories{
-        padding-top: 130px;
+    .directories {
+        position: absolute;
+        bottom: 20px; /* Adjust this value to control space from the bottom */
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+        
     }
 
     .intro-btn {
@@ -206,6 +213,7 @@
 
     .social-container {
         justify-content: center; /* Center social icons */
+        
     }
 }
 
